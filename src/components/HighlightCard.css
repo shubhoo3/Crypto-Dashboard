@@ -1,0 +1,261 @@
+.highlight-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-top: 4px solid #007bff;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card type specific colors */
+.trending-card {
+  border-top-color: #ff6b35;
+}
+
+.gainers-card {
+  border-top-color: #28a745;
+}
+
+.losers-card {
+  border-top-color: #dc3545;
+}
+
+.volume-card {
+  border-top-color: #6f42c1;
+}
+
+.market-cap-card {
+  border-top-color: #fd7e14;
+}
+
+.highlight-card-header {
+  padding: 20px 20px 16px 20px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.highlight-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 4px 0;
+}
+
+.highlight-subtitle {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.highlight-card-body {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.coins-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-coin-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f8f9fa;
+  transition: background-color 0.2s;
+  gap: 12px;
+}
+
+.highlight-coin-item:hover {
+  background: #f8f9fa;
+}
+
+.highlight-coin-item:last-child {
+  border-bottom: none;
+}
+
+.coin-rank {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  min-width: 20px;
+}
+
+.coin-basic-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.highlight-coin-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.coin-name-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.highlight-coin-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #212529;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.highlight-coin-symbol {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+.coin-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 80px;
+}
+
+.trending-score,
+.price-change-stat,
+.volume-stat,
+.market-cap-stat,
+.price-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.no-data {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.highlight-card-footer {
+  padding: 12px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.view-more {
+  font-size: 0.85rem;
+  color: #007bff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.view-more:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .highlight-card-header {
+    padding: 16px;
+  }
+  
+  .highlight-title {
+    font-size: 1rem;
+  }
+  
+  .highlight-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .highlight-coin-item {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  
+  .coin-basic-info {
+    gap: 6px;
+  }
+  
+  .highlight-coin-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .highlight-coin-name {
+    font-size: 0.8rem;
+  }
+  
+  .highlight-coin-symbol {
+    font-size: 0.7rem;
+  }
+  
+  .coin-stats {
+    min-width: 70px;
+  }
+  
+  .stat-label {
+    font-size: 0.65rem;
+  }
+  
+  .stat-value {
+    font-size: 0.75rem;
+  }
+  
+  .highlight-card-footer {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-coin-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .coin-basic-info {
+    width: 100%;
+  }
+  
+  .coin-stats {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .trending-score,
+  .price-change-stat,
+  .volume-stat,
+  .market-cap-stat,
+  .price-stat {
+    align-items: flex-start;
+  }
+}

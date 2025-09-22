@@ -1,0 +1,277 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.crypto-icon {
+  font-size: 2.2rem;
+  color: #ffd700;
+}
+
+.app-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+}
+
+.market-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.summary-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.summary-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.summary-change {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Main Content */
+.app-main {
+  flex: 1;
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.highlights-wrapper {
+  margin-bottom: 48px;
+}
+
+.coins-section {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Footer Styles */
+.app-footer {
+  background: #212529;
+  color: white;
+  padding: 40px 0 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-section p {
+  color: #adb5bd;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  color: #adb5bd;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #495057;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 32px 0;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .crypto-icon {
+    font-size: 1.8rem;
+  }
+  
+  .app-subtitle {
+    font-size: 1rem;
+  }
+  
+  .market-summary {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .summary-item {
+    padding: 16px;
+  }
+  
+  .summary-value {
+    font-size: 1.25rem;
+  }
+  
+  .app-main {
+    padding: 32px 0;
+  }
+  
+  .highlights-wrapper {
+    margin-bottom: 32px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section-header p {
+    font-size: 0.9rem;
+    padding: 0 16px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .app-footer {
+    padding: 32px 0 16px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 24px 0;
+  }
+  
+  .app-title {
+    font-size: 1.75rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .crypto-icon {
+    font-size: 1.5rem;
+  }
+  
+  .app-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .header-content {
+    margin-bottom: 24px;
+  }
+  
+  .summary-item {
+    padding: 12px;
+  }
+  
+  .summary-value {
+    font-size: 1.1rem;
+  }
+  
+  .app-main {
+    padding: 24px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-header {
+    margin-bottom: 24px;
+  }
+}
